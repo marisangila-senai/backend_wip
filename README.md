@@ -56,7 +56,7 @@ Clonar o repositório desejado para o seu computador.
    * No terminal do VS Code, navegue até o diretório onde deseja armazenar o repositório clonado e execute:
 
      ```bash
-     git clone https://url-do-repositorio.git
+     git clone [https://url-do-repositorio.git](https://github.com/marisangila-senai/backend_wip.git)
      ```
 
    > **Exemplo**:
