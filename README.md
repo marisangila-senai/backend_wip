@@ -10,13 +10,6 @@
 
    * Após o download, execute o instalador (`.exe`).
 
-3. **Escolher as Opções de Instalação**:
-
-   * Durante o processo de instalação, você verá várias opções. As configurações padrão geralmente são as mais recomendadas:
-
-     * **Escolha do Editor**: Você pode escolher o editor de texto padrão (como Visual Studio Code) ou deixar o Git usar o editor de texto padrão do sistema.
-     * **Ajustes de PATH**: Certifique-se de escolher a opção "Git from the command line and also from 3rd-party software" para garantir que o Git seja acessível no terminal do Windows.
-
 4. **Finalizar a Instalação**:
 
    * Após concluir as opções, clique em "Next" até o final do processo e, por fim, clique em "Install".
@@ -72,7 +65,6 @@ Clonar o repositório desejado para o seu computador.
      ```bash
      cd nome-do-repositorio
      ```
-     
 ---
 
 ### **Passo 4: Criar uma Nova Branch**
@@ -82,10 +74,10 @@ Clonar o repositório desejado para o seu computador.
    * Crie uma nova branch com seu nome. No terminal ou **git bash**, digite:
 
      ```bash
-     git checkout -b nome-da-pessoa
+     git checkout -b seu_nome
      ```
 
-2. ** (Opcional) Confirmar que a Branch foi Criada**:
+2. **(Opcional) Confirmar que a Branch foi Criada**:
 
    * Para verificar em qual branch você está, use o comando:
 
