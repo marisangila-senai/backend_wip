@@ -7,7 +7,6 @@
    * Vá para o [site oficial do Git](https://git-scm.com/) e clique em **"Download"** para Windows.
 
 2. **Inicie o Instalador**:
-git
    * Após o download, execute o instalador (`.exe`).
 
 4. **Finalizar a Instalação**:
