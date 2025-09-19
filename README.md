@@ -77,7 +77,7 @@ Clonar o repositório desejado para o seu computador.
      git checkout -b seu_nome
      ```
 
-2. ** (Opcional) Confirmar que a Branch foi Criada**:
+2. **(Opcional) Confirmar que a Branch foi Criada**:
 
    * Para verificar em qual branch você está, use o comando:
 
