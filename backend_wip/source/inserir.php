@@ -2,11 +2,12 @@
     include_once("conexao.php");
 
     $email = $_POST["email"];
-    $senha = MD5($_POST["senha"]);
-
+    $senha = $_POST["senha"];
+    $hash = hash('sha256' , $senha);
+ 
     $sql = $conn->prepare("INSERT INTO usuario (email_usuario, senha_usuario) VALUE (?,?)");
 
-    $sql->execute([$email,$senha]);
+    $sql->execute([$email,$hash]);
 
     unset($sql);
     unset($conn);
