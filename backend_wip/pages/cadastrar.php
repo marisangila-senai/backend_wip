@@ -11,7 +11,7 @@
 <body>
 <div class="container-fluid">
         <!-- Implementar -->
-        <form> 
+        <form method="POST" action="../source/inserir.php"> 
             <div class="form-group">
                 <div class="row justify-content-center align-items-centers">
                     <div class="col-md-auto">
