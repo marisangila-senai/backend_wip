@@ -5,6 +5,6 @@
     }
     catch(PDOException $erro)
     {
-        echo("ERRO NA CONEXÃO: <br>".$erro->getMessage());
+        echo("ERRO NA CONEXÃO: <br>".$errgito->getMessage());
     }
 ?>
