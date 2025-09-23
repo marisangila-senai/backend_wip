@@ -82,5 +82,5 @@ Clonar o repositório desejado para o seu computador.
    * Para verificar em qual branch você está, use o comando:
 
      ```bash
-     git branch
+
      ```
