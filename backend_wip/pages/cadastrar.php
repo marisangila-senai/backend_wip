@@ -11,20 +11,20 @@
 <body>
 <div class="container-fluid">
         <!-- Implementar -->
-        <form> 
+        <form method="POST" action="../source/inserir.php"> 
             <div class="form-group">
                 <div class="row justify-content-center align-items-centers">
                     <div class="col-md-auto">
                         <label>
                             E-mail:
                         </label>
-                        <input type="email" class="form-control" name="email">
+                        <input required type="email" class="form-control" name="email">
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-centers">
                     <div class="col-md-auto">
                         <label>Senha:</label>
-                        <input type="password" class="form-control" name="senha">
+                        <input required type="password" class="form-control" name="senha">
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-centers">
