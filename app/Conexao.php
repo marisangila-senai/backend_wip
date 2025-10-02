@@ -11,7 +11,7 @@ class Conexao extends PDO
         $this->nome = 'db';
         $this->usuario = 'root';
         $this->senha = '';
-        $this->servidor = 'localhost:8080';
+        $this->servidor = 'localhost';
 
         $dsn = "mysql:host={$this->servidor};dbname={$this->nome};charset=utf8";
 
