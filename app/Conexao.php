@@ -9,9 +9,9 @@ class Conexao extends PDO
     public function __construct()
     {
         $this->nome = 'db';
-        $this->usuario = 'user';
-        $this->senha = '123';
-        $this->servidor = 'localhost';
+        $this->usuario = 'root';
+        $this->senha = '';
+        $this->servidor = 'localhost:8080';
 
         $dsn = "mysql:host={$this->servidor};dbname={$this->nome};charset=utf8";
 

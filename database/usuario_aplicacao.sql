@@ -1,3 +1,4 @@
+-- Criar um usuário no banco de dados para a conexão da aplicação.
 USE db;
 
 CREATE USER 'user'@'localhost' IDENTIFIED BY '123';
