@@ -1,0 +1,41 @@
+
+@startuml
+left to right direction
+
+actor Convidado
+actor Usuario
+actor Admin
+
+rectangle "Sistema" {
+    (Login)
+    (Logout)
+    (Cadastrar)
+    (Listar Usuários) as Visualizar
+    (Cadastrar Usuário)
+    (Editar Usuário)
+    (Excluir Usuário)
+}
+
+' Relações Convidado
+Convidado --> (Cadastrar)
+
+' Relações Usuário Comum
+Usuario --> (Login)
+Usuario --> Visualizar
+Usuario --> (Cadastrar Usuário)
+Usuario --> (Logout)
+
+' Relações Administrador
+Admin --> (Editar Usuário)
+Admin --> (Excluir Usuário)
+
+' Dependência de Login
+Visualizar ..> (Login) : <<include>>
+(Logout) ..> (Login) : <<extend>>
+(Cadastrar Usuário) ..> (Login) : <<extend>>
+(Editar Usuário) ..> (Login) : <<extend>>
+(Excluir Usuário) ..> (Login) : <<extend>>
+
+' Herança de ator: Admin herda de Usuario
+Admin -|> Usuario
+@enduml

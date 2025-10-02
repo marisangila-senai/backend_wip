@@ -1,0 +1,39 @@
+flowchart TD
+    subgraph Navegador
+        U1["Usuário"]
+    end
+
+    subgraph Publica["Área Pública"]
+        U2["index.php (Tela de Login)"]
+        U4["index.php?acao=cadastrar (Cadastro)"]
+        U3["POST /index.php?acao=login"]
+        U10["POST /index.php?acao=inserir (Enviar Cadastro)"]
+    end
+
+    subgraph Logada["Área Logada"]
+        U5["Página Home"]
+        U6["index.php?acao=buscarid (Editar)"]
+        U7["index.php?acao=excluir (Excluir)"]
+        U8["index.php?acao=logout (Logout)"]
+        U9["POST /index.php?acao=editar (Salvar Edição)"]
+    end
+
+    %% Fluxo da navegação
+    U1 --> U2
+    U2 -- "Clicar em Login" --> U3
+    U2 -- "Clicar em Cadastre-se" --> U4
+    U4 -- "Enviar Cadastro" --> U10
+    U10 -- "Cadastro inválido ou voltar" --> U4
+    U10 -- "Cadastro válido" --> U2
+    U3 -- "Login válido" --> U5
+    U3 -- "Login inválido" --> U2
+
+    %% Ações dentro da área logada
+    U5 -- "Clicar em Editar" --> U6
+    U5 -- "Clicar em Excluir" --> U7
+    U5 -- "Clicar em Logout" --> U8
+    U6 -- "Salvar edição" --> U9
+    U9 --> U5
+    U7 -- "Voltar para Home" --> U5
+    U8 --> U2
+

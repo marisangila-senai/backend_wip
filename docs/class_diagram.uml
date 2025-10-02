@@ -1,0 +1,55 @@
+@startuml
+' Classe Gateway
+class Gateway {
+    +run()
+    -verificarLogin()
+    -verificarPost()
+    -verificarGet()
+}
+
+' Classe Login
+class Login {
+    -usuario: Usuario
+    -senha
+    -email
+    +__construct()
+    +getSenha()
+    +setSenha(senha)
+    +getEmail()
+    +setEmail(email)
+    +login()
+    +logout()
+}
+
+' Classe Usuario
+class Usuario {
+    -id
+    -conexao
+    -email
+    -senha
+    -eh_adm
+    +__construct()
+    +getId()
+    +setId(id)
+    +getConexao()
+    +setConexao(conexao)
+    +getEmail()
+    +setEmail(email)
+    +getSenha()
+    +setSenha(senha)
+    +getEhAdm()
+    +setEhAdm(eh_adm)
+    +inserir()
+    +listar()
+    +buscar()
+    +atualizar()
+    +excluir()
+    +buscarPorEmail(email)
+}
+
+' Relações
+
+Gateway --> Login : chama autenticação
+Gateway --> Usuario : chama CRUD
+Login --> Usuario : utiliza
+@enduml
