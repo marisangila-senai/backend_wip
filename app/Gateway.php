@@ -14,7 +14,6 @@ class Gateway {
 
         switch ($acao) {
             case 'login':
-                if ($this->verificarLogin()) {
                     $login = new Login();
                     if ($login->login()) {
                         header("Location: index.php?acao=listar");
@@ -22,7 +21,6 @@ class Gateway {
                     } else {
                         echo "E-mail ou senha inválidos!";
                     }
-                }
                 break;
 
             case 'logout':
